@@ -21,6 +21,9 @@ public class GetElementAttribute {
         // Get text practice
         System.out.println("firstLink.getText() = " + firstLink.getText());
 
+        // Navigate to google.com and identify the searchbox and get couple of attributes value
+        driver.navigate().to("https://google.com");
+
         Thread.sleep(3000);
         driver.quit();
     }
