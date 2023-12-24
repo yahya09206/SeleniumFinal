@@ -22,7 +22,7 @@ public class GetElementAttribute {
 //        System.out.println("firstLink.getText() = " + firstLink.getText());
 
         // Navigate to google.com and identify the searchbox and get couple of attributes value
-        driver.navigate().to("https://google.com");
+        driver.navigate().to("https://www.google.com/");
         WebElement searchBox = driver.findElement(By.name("q"));
         searchBox.sendKeys("Selenium");
 
@@ -38,6 +38,9 @@ public class GetElementAttribute {
         System.out.println("searchBox.getAttribute(\"spellcheck\") = " + searchBox.getAttribute("spellcheck"));
         // role
         System.out.println("searchBox.getAttribute(\"role\") = " + searchBox.getAttribute("role"));
+        // Using value attribute of input text box to extract the text inside
+        System.out.println("searchBox.getAttribute(\"value\") = " + searchBox.getAttribute("value"));
+
 
         Thread.sleep(3000);
         driver.quit();
