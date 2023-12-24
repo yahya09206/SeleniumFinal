@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 
 public class FindMultipleElements {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
 
         WebDriverManager.chromedriver().setup();
@@ -18,9 +18,13 @@ public class FindMultipleElements {
 
         // Get all the links that have partial text A in it
         List<WebElement> allLink = driver.findElements(By.partialLinkText("A"));
+        allLink.size();
         for (WebElement webElement : allLink) {
             System.out.println("webElement.getText() = " + webElement.getText());
         }
+
+        Thread.sleep(3000);
+        driver.quit();
 
     }
 }
