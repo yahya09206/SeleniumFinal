@@ -23,6 +23,8 @@ public class GetElementAttribute {
 
         // Navigate to google.com and identify the searchbox and get couple of attributes value
         driver.navigate().to("https://google.com");
+        WebElement searchBox = driver.findElement(By.id("input"));
+        searchBox.sendKeys("Selenium");
 
         Thread.sleep(3000);
         driver.quit();
