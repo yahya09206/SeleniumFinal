@@ -11,5 +11,8 @@ public class FindMultipleElements {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://practice.cydeo.com/");
+
+        // Get all the links that have partial text A in it
+
     }
 }
