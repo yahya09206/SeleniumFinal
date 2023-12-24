@@ -25,6 +25,11 @@ public class GetElementByTagName {
         List<WebElement> allATags = driver.findElements(By.tagName("a"));
         System.out.println("allATags.size() = " + allATags.size());
 
+        // Iterate thru list and print them out
+        for (WebElement eachATagElement : allATags) {
+            System.out.println("eachATagElement.getText() = " + eachATagElement.getText());
+        }
+
         Thread.sleep(3000);
         driver.quit();
     }
