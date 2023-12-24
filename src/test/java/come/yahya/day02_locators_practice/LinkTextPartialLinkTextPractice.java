@@ -30,6 +30,7 @@ public class LinkTextPartialLinkTextPractice {
 
         // Temporary sleep
         Thread.sleep(5000);
+        // Quit instance
         driver.quit();
     }
 }
