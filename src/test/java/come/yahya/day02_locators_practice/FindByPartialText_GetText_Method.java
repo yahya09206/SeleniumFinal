@@ -17,5 +17,9 @@ public class FindByPartialText_GetText_Method {
         // Using partial link text then get the full text out using new method getText
         WebElement myLnk = driver.findElement(By.partialLinkText("Disappearing"));
         System.out.println("myLnk.getText() = " + myLnk.getText());
+
+        // What if I just provide partial link as letter A
+        WebElement aLink = driver.findElement(By.partialLinkText("A"));
+        System.out.println("aLink.getText() = " + aLink.getText());
     }
 }
