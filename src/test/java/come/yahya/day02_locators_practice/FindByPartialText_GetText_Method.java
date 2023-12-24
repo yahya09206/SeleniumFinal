@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FindByPartialText_GetText_Method {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -21,5 +21,8 @@ public class FindByPartialText_GetText_Method {
         // What if I just provide partial link as letter A
         WebElement aLink = driver.findElement(By.partialLinkText("A"));
         System.out.println("aLink.getText() = " + aLink.getText());
+
+        Thread.sleep(3000);
+        driver.quit();
     }
 }
