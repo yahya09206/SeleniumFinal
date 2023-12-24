@@ -23,7 +23,7 @@ public class GetElementAttribute {
 
         // Navigate to google.com and identify the searchbox and get couple of attributes value
         driver.navigate().to("https://google.com");
-        WebElement searchBox = driver.findElement(By.id("input"));
+        WebElement searchBox = driver.findElement(By.name("q"));
         searchBox.sendKeys("Selenium");
 
         // Get the class Atrribute
@@ -31,9 +31,13 @@ public class GetElementAttribute {
         // maxLength
         System.out.println("searchBox.getAttribute(\"maxLength\") = " + searchBox.getAttribute("maxLength"));
         // title
+        System.out.println("searchBox.getAttribute(\"role\") = " + searchBox.getAttribute("role"));
         // autocapitalize
+        System.out.println("searchBox.getAttribute(\"autocapitalize\") = " + searchBox.getAttribute("autocapitalize"));
         // spellcheck
+        System.out.println("searchBox.getAttribute(\"spellcheck\") = " + searchBox.getAttribute("spellcheck"));
         // role
+        System.out.println("searchBox.getAttribute(\"role\") = " + searchBox.getAttribute("role"));
 
         Thread.sleep(3000);
         driver.quit();
