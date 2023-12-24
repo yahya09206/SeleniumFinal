@@ -18,7 +18,7 @@ public class FindMultipleElements {
 
         // Get all the links that have partial text A in it
         List<WebElement> allLink = driver.findElements(By.partialLinkText("A"));
-        allLink.size();
+        System.out.println("allLink.size() = " + allLink.size());
         for (WebElement webElement : allLink) {
             System.out.println("webElement.getText() = " + webElement.getText());
         }
