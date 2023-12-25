@@ -30,6 +30,7 @@ public class GetElementByTagName {
             System.out.println("eachATagElement.getText() = " + eachATagElement.getText());
         }
 
+        // Quit after 3 seconds
         Thread.sleep(3000);
         driver.quit();
     }
