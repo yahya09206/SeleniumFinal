@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 public class LocatingRadioButtons {
     public static void main(String[] args) throws InterruptedException {
 
@@ -29,6 +31,13 @@ public class LocatingRadioButtons {
         // Any element can use isDisabled() method to check whether element is disabled or not
         // One can not take any action on disabled element
         System.out.println("greenRadio.isEnabled() = " + greenRadio.isEnabled());
+
+        // A radio group is grouped by its name attribute
+        // All radio buttons related to color has name color in this case
+        // So we can findElements to get all of them
+        List<WebElement> allColorRadios = driver.findElements(By.name("name"));
+        // Check the size to see how many radio buttons were identified
+        System.out.println("allColorRadios.size() = " + allColorRadios.size());
 
         Thread.sleep(3000);
         driver.quit();
