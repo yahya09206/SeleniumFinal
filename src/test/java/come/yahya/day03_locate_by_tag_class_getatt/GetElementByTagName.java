@@ -13,6 +13,7 @@ public class GetElementByTagName {
 
         // Setup Chromedriver
         WebDriverManager.chromedriver().setup();
+        // New instance of chrome driver
         WebDriver driver = new ChromeDriver();
         driver.get("https://practice.cydeo.com/");
 
