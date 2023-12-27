@@ -32,6 +32,19 @@ public class LocatingCheckBoxes {
         // Click second checkbox
         checkBox2.click();
 
+        // Check if each one is clicked already or not
+        if (!checkBox.isSelected()){
+            checkBox.click();
+        } else {
+            System.out.println("Take it easy, box is already selected");
+        }
+
+        if (!checkBox2.isSelected()){
+            checkBox2.click();
+        } else {
+            System.out.println("Take it easy, box is already selected");
+        }
+
         // Close browser after 3 seconds
         Thread.sleep(3000);
         driver.quit();
