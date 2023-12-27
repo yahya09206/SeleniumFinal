@@ -11,7 +11,7 @@ public class LocatingRadioButtons {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-        driver.get("https://practice.cydeo.com/radiobuttons");
+        driver.get("https://practice.cydeo.com/radio_buttons");
 
         // Locate the blue radio button
         WebElement blueRadio = driver.findElement(By.id("blue"));
