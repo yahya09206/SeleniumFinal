@@ -35,7 +35,7 @@ public class LocatingRadioButtons {
         // A radio group is grouped by its name attribute
         // All radio buttons related to color has name color in this case
         // So we can findElements to get all of them
-        List<WebElement> allColorRadios = driver.findElements(By.name("name"));
+        List<WebElement> allColorRadios = driver.findElements(By.name("color"));
         // Check the size to see how many radio buttons were identified
         System.out.println("allColorRadios.size() = " + allColorRadios.size());
         // Click on third radio button
