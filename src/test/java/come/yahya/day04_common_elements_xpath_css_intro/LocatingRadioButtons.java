@@ -38,6 +38,8 @@ public class LocatingRadioButtons {
         List<WebElement> allColorRadios = driver.findElements(By.name("name"));
         // Check the size to see how many radio buttons were identified
         System.out.println("allColorRadios.size() = " + allColorRadios.size());
+        // Click on third radio button
+        allColorRadios.get(2).click();
 
         Thread.sleep(3000);
         driver.quit();
