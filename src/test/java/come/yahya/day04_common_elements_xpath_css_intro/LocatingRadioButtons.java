@@ -40,6 +40,11 @@ public class LocatingRadioButtons {
         System.out.println("allColorRadios.size() = " + allColorRadios.size());
         // Click on third radio button
         allColorRadios.get(2).click();
+        // Loop over all the elements to print these : id attributes, isSelected, isEnabled
+        // allColorRadios.iter and hit enter and give each element a name
+        for (WebElement eachColorRadio : allColorRadios) {
+            System.out.println("eachColorRadio.getAttribute(\"id\") = " + eachColorRadio.getAttribute("id"));
+        }
 
         Thread.sleep(3000);
         driver.quit();
