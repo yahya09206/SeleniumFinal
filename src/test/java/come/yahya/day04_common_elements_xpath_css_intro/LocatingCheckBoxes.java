@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LocatingCheckBoxes {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         // Checkboxes can be checked and unchecked
         // That's the only attribute special about the element
@@ -24,5 +24,9 @@ public class LocatingCheckBoxes {
         // Identify second checkbox and check if it is selected
         WebElement checkBox2 = driver.findElement(By.id("box2"));
         System.out.println("checkBox2.isSelected() = " + checkBox2.isSelected());
+
+        // Close browser after 3 seconds
+        Thread.sleep(3000);
+        driver.quit();
     }
 }
