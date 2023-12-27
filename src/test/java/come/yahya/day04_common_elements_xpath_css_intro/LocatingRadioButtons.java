@@ -44,6 +44,9 @@ public class LocatingRadioButtons {
         // allColorRadios.iter and hit enter and give each element a name
         for (WebElement eachColorRadio : allColorRadios) {
             System.out.println("eachColorRadio.getAttribute(\"id\") = " + eachColorRadio.getAttribute("id"));
+            System.out.println("eachColorRadio.isSelected() = " + eachColorRadio.isSelected());
+            System.out.println("eachColorRadio.isEnabled() = " + eachColorRadio.isEnabled());
+            System.out.println("----------------------");
         }
 
         Thread.sleep(3000);
