@@ -17,6 +17,12 @@ public class LocatingRadioButtons {
         WebElement blueRadio = driver.findElement(By.id("blue"));
         System.out.println("blueRadio.isSelected() = " + blueRadio.isSelected());
 
+        // Locate the red radio button
+        WebElement redRadio = driver.findElement(By.id("red"));
+        System.out.println("Before redRadio.isSelected() = " + redRadio.isSelected());
+        redRadio.click(); // This will click to check radio button
+        System.out.println("After redRadio.isSelected() = " + redRadio.isSelected());
+
         Thread.sleep(3000);
         driver.quit();
     }
