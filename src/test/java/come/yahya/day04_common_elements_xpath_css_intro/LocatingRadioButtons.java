@@ -23,6 +23,13 @@ public class LocatingRadioButtons {
         redRadio.click(); // This will click to check radio button
         System.out.println("After redRadio.isSelected() = " + redRadio.isSelected());
 
+        // Green radio button
+        WebElement greenRadio = driver.findElement(By.id("green"));
+        System.out.println("greenRadio.isSelected() = " + greenRadio.isSelected());
+        // Any element can use isDisabled() method to check whether element is disabled or not
+        // One can not take any action on disabled element
+        System.out.println("greenRadio.isEnabled() = " + greenRadio.isEnabled());
+
         Thread.sleep(3000);
         driver.quit();
     }
