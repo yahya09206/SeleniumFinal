@@ -27,6 +27,11 @@ public class LocatingCheckBoxes {
         System.out.println("checkBox2.isSelected() = " + checkBox2.isSelected());
         System.out.println("checkBox2.getAttribute(\"checked\") = " + checkBox2.getAttribute("checked"));
 
+        // Click first checkbox
+        checkBox.click();
+        // Click second checkbox
+        checkBox2.click();
+
         // Close browser after 3 seconds
         Thread.sleep(3000);
         driver.quit();
