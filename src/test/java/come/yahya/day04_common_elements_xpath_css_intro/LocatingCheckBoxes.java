@@ -1,7 +1,9 @@
 package come.yahya.day04_common_elements_xpath_css_intro;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LocatingCheckBoxes {
@@ -14,5 +16,9 @@ public class LocatingCheckBoxes {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://practice.cydeo.com/checkboxes");
+
+        // Identify first checkbox and check if it is selected
+        WebElement checkBox = driver.findElement(By.id("box1"));
+        System.out.println("checkBox.isSelected() = " + checkBox.isSelected());
     }
 }
