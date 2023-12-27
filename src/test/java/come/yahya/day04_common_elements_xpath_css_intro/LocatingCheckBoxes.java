@@ -20,10 +20,12 @@ public class LocatingCheckBoxes {
         // Identify first checkbox and check if it is selected
         WebElement checkBox = driver.findElement(By.id("box1"));
         System.out.println("checkBox.isSelected() = " + checkBox.isSelected());
+        System.out.println("checkBox.getAttribute(\"checked\") = " + checkBox.getAttribute("checked"));
 
         // Identify second checkbox and check if it is selected
         WebElement checkBox2 = driver.findElement(By.id("box2"));
         System.out.println("checkBox2.isSelected() = " + checkBox2.isSelected());
+        System.out.println("checkBox2.getAttribute(\"checked\") = " + checkBox2.getAttribute("checked"));
 
         // Close browser after 3 seconds
         Thread.sleep(3000);
