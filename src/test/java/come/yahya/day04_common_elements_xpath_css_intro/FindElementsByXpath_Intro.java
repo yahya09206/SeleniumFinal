@@ -35,7 +35,7 @@ public class FindElementsByXpath_Intro {
         // Click on checkboxes link to go to checkbox page using xpath
         driver.findElement(By.xpath("//li/a[text()='Checkboxes']")).click();
         // Identify header, 1st checkbox using xpath
-        WebElement header = driver.findElement(By.xpath("//h2[text()='Checkboxes']"));
+        WebElement header = driver.findElement(By.xpath("//h3[text()='Checkboxes']"));
         System.out.println("header.getText() = " + header.getText());
 
         WebElement firstCheckbox = driver.findElement(By.xpath("//input[@id='box1']"));
