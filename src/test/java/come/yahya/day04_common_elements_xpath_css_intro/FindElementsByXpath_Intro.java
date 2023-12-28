@@ -19,6 +19,10 @@ public class FindElementsByXpath_Intro {
         WebElement headerSpan = driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div/h1/span"));
         System.out.println("headerSpan.getText() = " + headerSpan.getText());
 
+        // Using relative path
+        WebElement headerSpan2 = driver.findElement(By.xpath("//h1/span"));
+        System.out.println("headerSpan2 = " + headerSpan2);
+
         Thread.sleep(3000);
         driver.quit();
 
