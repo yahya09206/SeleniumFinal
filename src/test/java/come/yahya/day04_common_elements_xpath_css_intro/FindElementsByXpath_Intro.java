@@ -27,11 +27,16 @@ public class FindElementsByXpath_Intro {
         // elementTag[@attributeName='attribute value']
         // if you have more than one
         // elementTag[@attributeName='attribute value' and @attribute2Name='attribute2 value']
-        // you have option to provide idnex
+        // you have option to provide index
         // //someElement[indexGoesHere]
         // /html/body/div/div[2]/div/form/span[1]
         // //*[@id="checkboxes"]/span[1]
         // //*[@id="box1"]
+        // Click on checkboxes link to go to checkbox page using xpath
+        driver.findElement(By.xpath("//li/a[text()='Checkboxes']")).click();
+        // Identify header, 1st checkbox using xpath
+        WebElement header = driver.findElement(By.xpath("//h2[text()='Checkboxes']"));
+        System.out.println("header.getText() = " + header.getText());
 
         Thread.sleep(3000);
         driver.quit();
