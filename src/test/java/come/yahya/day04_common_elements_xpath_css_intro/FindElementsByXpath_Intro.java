@@ -38,6 +38,9 @@ public class FindElementsByXpath_Intro {
         WebElement header = driver.findElement(By.xpath("//h2[text()='Checkboxes']"));
         System.out.println("header.getText() = " + header.getText());
 
+        WebElement firstCheckbox = driver.findElement(By.xpath("//input[@id='box1']"));
+        System.out.println("firstCheckbox.isSelected() = " + firstCheckbox.isSelected());
+
         Thread.sleep(3000);
         driver.quit();
 
