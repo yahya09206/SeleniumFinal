@@ -33,7 +33,7 @@ public class YahooSearchPageTest {
     }
 
     @Test
-    public void testYahooSearchResultPageTitle(){
+    public void testYahooSearchResultPageTitle() throws InterruptedException {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -42,5 +42,13 @@ public class YahooSearchPageTest {
         // Identify searchbox and enter selenium, and hit Enter key on keyboard
         WebElement searchBar = driver.findElement(By.xpath("//input[@name='p']"));
         searchBar.sendKeys("Selenium" + Keys.ENTER);
+
+//        String expectedTitleStartsWith = "selenium";
+        String actualTitle = driver.getTitle();
+
+        Assertions.assertTrue(actualTitle.startsWith("Selenium"));
+
+        Thread.sleep(3000);
+        driver.quit();
     }
 }
