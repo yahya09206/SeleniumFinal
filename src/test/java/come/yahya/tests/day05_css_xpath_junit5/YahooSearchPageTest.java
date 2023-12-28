@@ -1,10 +1,7 @@
 package come.yahya.tests.day05_css_xpath_junit5;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -21,9 +18,14 @@ public class YahooSearchPageTest {
     }
 
     @BeforeEach
-    public static void setupWebDriver(){
-        WebDriver driver = new ChromeDriver();
+    public void setupWebDriver(){
+        driver = new ChromeDriver();
         driver.get("https://search.yahoo.com/");
+    }
+
+    @AfterEach
+    public void teardown(){
+        driver.quit();
     }
 
     // Write 2 tests
@@ -46,8 +48,6 @@ public class YahooSearchPageTest {
     @Test
     public void testYahooSearchResultPageTitle() throws InterruptedException {
 
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
         driver.get("https://search.yahoo.com/");
 
         // Identify searchbox and enter selenium, and hit Enter key on keyboard
@@ -58,8 +58,5 @@ public class YahooSearchPageTest {
         String actualTitle = driver.getTitle();
 
         Assertions.assertTrue(actualTitle.startsWith("Selenium"));
-
-        Thread.sleep(3000);
-        driver.quit();
     }
 }
