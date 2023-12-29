@@ -1,5 +1,6 @@
 package come.yahya.tests.day08_upload_actions_window_wait_js;
 
+import come.yahya.utility.BrowserUtil;
 import come.yahya.utility.TestBase;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -23,6 +24,7 @@ public class FileUploadTest extends TestBase {
 
         // submit file
         driver.findElement(By.id("file-submit")).click();
+        BrowserUtil.waitFor(2);
 
         // Thread.sleep(2000) is needed sometimes, but we are forced to deal with checked exceptions
         // objective: have a human-readable utility method so we can call like this
