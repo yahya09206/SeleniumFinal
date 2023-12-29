@@ -12,8 +12,6 @@ public class SlowElementTest extends TestBase {
     @Test
     public void testWait() throws InterruptedException {
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
         driver.navigate().to("https://practice.cydeo.com/dynamic_controls");
         driver.findElement(By.xpath("//button[.='Remove']")).click();
 
