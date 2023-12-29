@@ -24,5 +24,11 @@ public class FileUploadTest extends TestBase {
         // submit file
         driver.findElement(By.id("file-submit")).click();
 
+        // Thread.sleep(2000) is needed sometimes, but we are forced to deal with checked exceptions
+        // objective: have a human-readable utility method so we can call like this
+        // BrowserUtil.waitFor(2) --> no exception handling, jsut wait for 2 seconds
+        // Create a class called BrowserUtil under utility package
+        // Create a static method called waitFor and accept int as the amount of seconds to wait for
+
     }
 }
