@@ -24,5 +24,16 @@ public class AlertPracticeTest extends TestBase {
         System.out.println("driver.switchTo().alert().getText() = " + driver.switchTo().alert().getText());
         //driver.switchTo().alert().accept();
 
+        // JS confirm alerts
+        driver.findElement(By.xpath("//button[.='Click for JS Confirm']")).click();
+        // driver.switchTo().alert().dismiss(); // this will click on dismiss button on the confirmation box
+        driver.switchTo().alert().accept();
+
+        driver.findElement(By.xpath("//button[.='Click for JS Alert']")).click();
+
+        driver.switchTo().alert().sendKeys("Hello"); // this is how we can
+        driver.switchTo().alert().accept();
+
+        System.out.println("THE END");
     }
 }
