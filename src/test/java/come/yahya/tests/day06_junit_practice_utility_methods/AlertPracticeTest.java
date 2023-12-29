@@ -21,7 +21,8 @@ public class AlertPracticeTest extends TestBase {
             // accept() --> click on ok button
             // dismiss() --> click on cancel button
             // sendKeys(yourText) --> enter text into prompt
-        driver.switchTo().alert().accept();
+        System.out.println("driver.switchTo().alert().getText() = " + driver.switchTo().alert().getText());
+        //driver.switchTo().alert().accept();
 
     }
 }
