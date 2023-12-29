@@ -13,9 +13,10 @@ public abstract class TestBase {
 
     @BeforeEach
     public void setupWebDriver(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.get("https://search.yahoo.com/");
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//        driver.get("https://search.yahoo.com/");
+        driver = WebDriverFactory.getDriver("chrome");
     }
 
     @AfterEach
