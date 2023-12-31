@@ -22,7 +22,7 @@ public class FileUploadTest extends TestBase {
         String filepath = "/Users/solodolo/Downloads/Selenium.png";
         fileInputField.sendKeys(filepath);
 
-        // submit file
+        // submit file then wait two seconds
         driver.findElement(By.id("file-submit")).click();
         BrowserUtil.waitFor(2);
 
