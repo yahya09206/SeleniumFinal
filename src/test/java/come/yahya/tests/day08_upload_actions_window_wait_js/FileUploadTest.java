@@ -11,6 +11,7 @@ public class FileUploadTest extends TestBase {
     @Test
     public void testUpload(){
 
+        // navigate to cydeo practice site
         driver.get("https://practice.cydeo.com/upload");
 
         // Locate input field
