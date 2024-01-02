@@ -2,6 +2,7 @@ package come.yahya.utility;
 
 public class BrowserUtil {
 
+    // try catch for timing
     public static void waitFor(int seconds){
 
         try {
