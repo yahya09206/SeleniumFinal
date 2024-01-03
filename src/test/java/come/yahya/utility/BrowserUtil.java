@@ -5,7 +5,7 @@ public class BrowserUtil {
     // try catch for timing
     public static void waitFor(int seconds){
 
-        // Multiple by 1000 to get seconds
+        // Multiply by 1000 to get seconds
         try {
             Thread.sleep(seconds * 1000);
         } catch (InterruptedException e){
