@@ -9,6 +9,7 @@ public class BrowserUtil {
         try {
             Thread.sleep(seconds * 1000);
         } catch (InterruptedException e){
+            // print out error
             e.printStackTrace();
         }
     }
