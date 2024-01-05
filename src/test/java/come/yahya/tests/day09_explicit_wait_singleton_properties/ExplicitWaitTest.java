@@ -24,6 +24,8 @@ public class ExplicitWaitTest extends TestBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
         // Then we use until method that accepts expected conditions
         // ExpectedConditions helper class has a lot of pre-written conditions
+        // For common scenarios, so we don't have to build our own
+        // In this case we are checking for if title is equal to Dynamic Title
         wait.until(ExpectedConditions.titleIs("Dynamic title"));
 
         System.out.println("END");
