@@ -1,5 +1,6 @@
 package come.yahya.tests.day09_explicit_wait_singleton_properties;
 
+import come.yahya.utility.BrowserUtil;
 import come.yahya.utility.TestBase;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
@@ -31,9 +32,9 @@ public class ExplicitWaitTest extends TestBase {
 
         // Try different condition
         // Wait until the spongebob image is visible on screen
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"content\"]/img")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("img")));
 
-
+        BrowserUtil.waitFor(3);
         System.out.println("END");
     }
 }
