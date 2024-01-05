@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -22,5 +23,9 @@ public class ExplicitWaitTest extends TestBase {
         // we want to wait until the title value becomes "Dynamic Title"
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
         // Then we use until method that accepts expected conditions
+        // ExpectedConditions helper class has a lot of pre-written conditions
+        wait.until(ExpectedConditions.titleIs("Dynamic title"));
+
+        System.out.println("END");
     }
 }
