@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -26,7 +27,12 @@ public class ExplicitWaitTest extends TestBase {
         // ExpectedConditions helper class has a lot of pre-written conditions
         // For common scenarios, so we don't have to build our own
         // In this case we are checking for if title is equal to Dynamic Title
-        wait.until(ExpectedConditions.titleIs("Dynamic title"));
+//        wait.until(ExpectedConditions.titleIs("Dynamic title"));
+
+        // Try different condition
+        // Wait until the spongebob image is visible on screen
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"content\"]/img")));
+
 
         System.out.println("END");
     }
