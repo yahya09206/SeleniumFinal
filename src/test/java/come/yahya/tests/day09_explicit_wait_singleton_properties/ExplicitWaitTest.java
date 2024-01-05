@@ -32,9 +32,24 @@ public class ExplicitWaitTest extends TestBase {
 
         // Try different condition
         // Wait until the spongebob image is visible on screen
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("img")));
+        // VisibilityOfElementLocated accepts locator as a parameter
+        // So this means wait for 6 seconds max until the element is found by tagName("img")
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("img")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/img[@alt='square pants']")));
 
         BrowserUtil.waitFor(3);
         System.out.println("END");
+    }
+
+    @Test
+    public void testByTextToBe(){
+
+        // 1. Navigate to https://practice.cydeo.com/dynamic_loading
+        driver.get("https://practice.cydeo.com/dynamic_loading");
+        // 2. Click on example 7
+        driver.findElement(By.partialLinkText("Example 7")).click();
+        // 3. The title will show loading... until certain time,
+        // we want to wait until the title value becomes "Dynamic Title"
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
     }
 }
