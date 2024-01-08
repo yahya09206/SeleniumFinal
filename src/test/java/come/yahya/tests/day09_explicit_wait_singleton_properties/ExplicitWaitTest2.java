@@ -10,6 +10,7 @@ import java.time.Duration;
 
 public class ExplicitWaitTest2 extends TestBase {
 
+    // test to wait for interactive element
     @Test
     public void waitUntilElementInteractive(){
 
