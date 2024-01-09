@@ -14,6 +14,7 @@ public class ExplicitWaitTest2 extends TestBase {
     @Test
     public void waitUntilElementInteractive(){
 
+        // navigate to cydeo practice site
         driver.get("https://practice.cydeo.com/dynamic_controls");
         // elementToBeClickable(By locator)
         // elementToBeClickable(WebElement element)
