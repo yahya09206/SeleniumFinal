@@ -41,6 +41,7 @@ public class ExplicitWaitTest extends TestBase {
         System.out.println("END");
     }
 
+    // Test for waiting for text to appear
     @Test
     public void testByTextToBe(){
 
