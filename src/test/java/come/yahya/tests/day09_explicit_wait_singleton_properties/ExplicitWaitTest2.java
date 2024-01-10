@@ -24,6 +24,7 @@ public class ExplicitWaitTest2 extends TestBase {
         driver.findElement(By.xpath("//button[.='Enable']")).click();
         // apply wait to webdriver
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+        // waiting until element is visible
         wait.until(elementToBeClickable(By.cssSelector("form#input-example>input")));
     }
 }
