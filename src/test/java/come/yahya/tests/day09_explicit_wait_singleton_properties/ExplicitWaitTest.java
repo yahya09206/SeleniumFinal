@@ -49,7 +49,7 @@ public class ExplicitWaitTest extends TestBase {
         driver.get("https://practice.cydeo.com/dynamic_loading");
         // 2. Click on example 7
         driver.findElement(By.partialLinkText("Example 7")).click();
-
+        //finding element by id
         WebElement alertArea = driver.findElement(By.id("alert"));
         System.out.println("alertArea.getText() = " + alertArea.getText());
         // 3. The title will show loading... until certain time,
