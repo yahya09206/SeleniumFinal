@@ -55,6 +55,7 @@ public class ExplicitWaitTest extends TestBase {
         // 3. The title will show loading... until certain time,
         // we want to wait until the title value becomes "Dynamic Title"
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+        // find alert
         alertArea = driver.findElement(By.id("alert"));
         System.out.println("alertArea.getText() = " + alertArea.getText());
 
