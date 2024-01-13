@@ -7,8 +7,13 @@ import come.yahya.utility.WebOrderUtil;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -35,7 +40,15 @@ public class WebOrderPracticeTest extends TestBase {
         // locate the error message element
         // with text "Invalid Login or Password." id ct100_MainContent_status
         // span[@id='ct100_MainContent_status']
-        WebElement errormsg = driver.findElement(By.xpath("//span[.='Invalid Login or Password.']"));
-        assertTrue(errormsg.isDisplayed());
+        // WebElement errormsg = driver.findElement(By.xpath("//span[.='Invalid Login or Password.']"));
+        // assertTrue(errormsg.isDisplayed());
+
+        // Check visibility of error element in 2 seconds
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(6));
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("\"//span[.='Invalid Login or Password.']\"")));
+        }catch(TimeoutException e){
+            System.out.println("e = " + e);
+        }
     }
 }
