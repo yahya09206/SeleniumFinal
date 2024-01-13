@@ -16,7 +16,7 @@ public class Singleton {
     public static Singleton getObj(){
 
         // check if obj exist = use current one
-        if (obj != null){
+        if (obj == null){
             System.out.println("Object has not been created, creating one now");
             obj = new Singleton();
             return obj;

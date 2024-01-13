@@ -7,5 +7,10 @@ public class SingletonPractice {
     @Test
     public void testSingleton(){
 
+        Singleton.getObj();
+        Singleton.getObj();
+        Singleton.getObj();
+        Singleton.getObj();
+        Singleton.getObj();
     }
 }
