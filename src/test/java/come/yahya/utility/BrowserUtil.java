@@ -24,6 +24,12 @@ public class BrowserUtil {
      *             e.printStackTrace();
      *         }
      */
+    /**
+     * This method will check for visiblity of element within the time given
+     * @param locator By.id or By.xpath or By.whatever
+     * @param seconds time to wait
+     * @return true if the element is found within the time and visible, false if not
+     */
     public static boolean checkvisbilityOfElement(By locator, int seconds){
 
     }
