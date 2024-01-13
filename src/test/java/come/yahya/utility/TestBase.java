@@ -18,7 +18,7 @@ public abstract class TestBase {
 //        WebDriverManager.chromedriver().setup();
 //        driver = new ChromeDriver();
 //        driver.get("https://search.yahoo.com/");
-        driver = WebDriverFactory.getDriver("chrome");
+        driver = Driver.getDriver(); //WebDriverFactory.getDriver("chrome");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
