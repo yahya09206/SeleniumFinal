@@ -6,7 +6,11 @@ import come.yahya.utility.TestBase;
 import come.yahya.utility.WebOrderUtil;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class WebOrderPracticeTest extends TestBase {
 
@@ -27,5 +31,11 @@ public class WebOrderPracticeTest extends TestBase {
     public void testInvalidCredentials(){
         WebOrderUtil.openWebOrderapp();
         WebOrderUtil.login("ebc", "efg");
+
+        // locate the error message element
+        // with text "Invalid Login or Password." id ct100_MainContent_status
+        // span[@id='ct100_MainContent_status']
+        WebElement errormsg = driver.findElement(By.xpath("//span[.='Invalid Login or Password.']"));
+        assertTrue(errormsg.isDisplayed());
     }
 }
