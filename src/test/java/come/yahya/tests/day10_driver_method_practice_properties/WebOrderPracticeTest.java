@@ -48,7 +48,7 @@ public class WebOrderPracticeTest extends TestBase {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("\"//span[.='Invalid Login or Password.']\"")));
         }catch(TimeoutException e){
-            System.out.println("e = " + e);
+            e.printStackTrace();
         }
     }
 }

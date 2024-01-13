@@ -1,5 +1,7 @@
 package come.yahya.utility;
 
+import org.openqa.selenium.By;
+
 public class BrowserUtil {
 
     // try catch for timing
@@ -12,5 +14,17 @@ public class BrowserUtil {
             // print out error
             e.printStackTrace();
         }
+    }
+
+    /**
+     * WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(6));
+     *         try {
+     *             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("\"//span[.='Invalid Login or Password.']\"")));
+     *         }catch(TimeoutException e){
+     *             e.printStackTrace();
+     *         }
+     */
+    public static boolean checkvisbilityOfElement(By locator, int seconds){
+
     }
 }
