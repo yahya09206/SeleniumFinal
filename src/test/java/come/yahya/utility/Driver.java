@@ -1,5 +1,6 @@
 package come.yahya.utility;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -16,6 +17,7 @@ public class Driver {
     public static WebDriver getDriver(){
 
         if(obj == null){
+            WebDriverManager.chromedriver().setup();
             obj = new ChromeDriver();
             System.out.println("One and only created for the first time");
             return obj;
