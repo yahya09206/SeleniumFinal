@@ -2,6 +2,7 @@ package come.yahya.utility;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 
 // This isn't a test class so we can't extend testbase
@@ -31,7 +32,15 @@ public class WebOrderUtility {
     }
 
     public static void logout(WebDriver driverParam){
-
         driverParam.findElement(By.id("ctl00_logout")).click();
+    }
+
+    public static boolean isAtOrderPage(WebDriver driverParam){
+
+        boolean result = false;
+
+        // locator for the header element of all order page
+        // //h2[normalize-space(.)='List of All Orders']
+        WebElement header = driverParam.findElement(By.xpath("//h2[normalize-space(.)='List of All Orders']"));
     }
 }
