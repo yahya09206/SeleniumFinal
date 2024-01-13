@@ -24,7 +24,7 @@ public class WebOrderTest extends TestBase {
         WebOrderUtility.login(driver);
         WebOrderUtility.login(driver, "blah", "blah");
 
-        BrowserUtil.waitFor(3);
+        BrowserUtil.waitFor(4);
 
         // Create a class called WebOrderUtility
         // Create a static void method called
