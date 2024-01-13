@@ -44,8 +44,12 @@ public class WebOrderUtility {
         // //h2[normalize-space(.)='List of All Orders']
         try{
             WebElement header = driverParam.findElement(By.xpath("//h2[normalize-space(.)='List of All Orders']"));
+            System.out.println("ELEMENT WAS IDENTIFIED");
+            result = true;
         }catch (NoSuchElementException e){
             System.out.println("NO Such element! you are not on the right page");
         }
+
+        return result;
     }
 }
