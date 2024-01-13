@@ -14,6 +14,8 @@ public class WebOrderTest extends TestBase {
         // Enter username
         driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester");
         // Enter password
+        driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("test");
         // Click login
+        driver.findElement(By.id("ctl00_MainContent_login_button")).click();
     }
 }
