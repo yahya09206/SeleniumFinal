@@ -22,4 +22,10 @@ public class WebOrderPracticeTest extends TestBase {
 
         BrowserUtil.waitFor(3);
     }
+
+    @Test
+    public void testInvalidCredentials(){
+        WebOrderUtil.openWebOrderapp();
+        WebOrderUtil.login("ebc", "efg");
+    }
 }
