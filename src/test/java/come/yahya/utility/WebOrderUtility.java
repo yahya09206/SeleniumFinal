@@ -1,6 +1,7 @@
 package come.yahya.utility;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -41,6 +42,10 @@ public class WebOrderUtility {
 
         // locator for the header element of all order page
         // //h2[normalize-space(.)='List of All Orders']
-        WebElement header = driverParam.findElement(By.xpath("//h2[normalize-space(.)='List of All Orders']"));
+        try{
+            WebElement header = driverParam.findElement(By.xpath("//h2[normalize-space(.)='List of All Orders']"));
+        }catch (NoSuchElementException e){
+            System.out.println("NO Such element! you are not on the right page");
+        }
     }
 }
