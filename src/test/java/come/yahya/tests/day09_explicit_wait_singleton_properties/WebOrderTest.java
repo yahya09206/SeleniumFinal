@@ -22,7 +22,8 @@ public class WebOrderTest extends TestBase {
 
 
         WebOrderUtility.login(driver);
-        WebOrderUtility.login(driver, "blah", "blah");
+        BrowserUtil.waitFor(2);
+        WebOrderUtility.logout(driver);
 
         BrowserUtil.waitFor(4);
 
