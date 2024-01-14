@@ -23,5 +23,9 @@ public class PropertyFileReadTest {
 
         // close the connection by calling slow method of FileInputStream object
         in.close();
+
+        // Now actaully read from the properties file using its key
+        String helloValue = properties.getProperty("hello");
+        System.out.println("helloValue = " + helloValue);
     }
 }
