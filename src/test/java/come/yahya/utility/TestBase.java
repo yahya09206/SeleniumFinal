@@ -24,6 +24,8 @@ public abstract class TestBase {
 
     @AfterEach
     public void teardown(){
-        driver.quit();
+        // driver.quit();
+        // quit the browser + make it null, so we can get a new one when we ask for it again
+        Driver.closeBrowser();
     }
 }
