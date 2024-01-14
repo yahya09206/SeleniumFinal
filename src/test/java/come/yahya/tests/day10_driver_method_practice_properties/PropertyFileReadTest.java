@@ -20,5 +20,8 @@ public class PropertyFileReadTest {
 
         // Load the FileInputStream into the Properties Object
         properties.load(in);
+
+        // close the connection by calling slow method of FileInputStream object
+        in.close();
     }
 }
