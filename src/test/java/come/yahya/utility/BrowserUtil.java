@@ -1,6 +1,11 @@
 package come.yahya.utility;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class BrowserUtil {
 
@@ -27,10 +32,21 @@ public class BrowserUtil {
     /**
      * This method will check for visiblity of element within the time given
      * @param locator By.id or By.xpath or By.whatever
-     * @param seconds time to wait
+     * @param timeToWait time to wait
      * @return true if the element is found within the time and visible, false if not
      */
-    public static boolean checkvisbilityOfElement(By locator, int seconds){
+    public static boolean checkvisbilityOfElement(By locator, int timeToWait){
 
+        boolean result = false;
+
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeToWait));
+
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        }catch(TimeoutException e){
+            System.out.println("WE DID NOT SEE THE ERROR MESSAGE ELEMENT");
+        }
+
+        return result;
     }
 }
