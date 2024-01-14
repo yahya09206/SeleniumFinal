@@ -44,11 +44,18 @@ public class WebOrderPracticeTest extends TestBase {
         // assertTrue(errormsg.isDisplayed());
 
         // Check visibility of error element in 2 seconds
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(6));
-        try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("\"//span[.='Invalid Login or Password.']\"")));
-        }catch(TimeoutException e){
-            e.printStackTrace();
-        }
+//        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(6));
+//        try {
+//            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("\"//span[.='Invalid Login or Password.']\"")));
+//        }catch(TimeoutException e){
+//            e.printStackTrace();
+//        }
+
+        // Check if element exists using new method we just created in BrowserUtil
+        boolean elementFound = BrowserUtil.checkvisbilityOfElement(By.xpath
+                ("//span[.='Invalid Login or Password.']"), 2);
+        // Wrap above cove into method isnide WebOrderUtil
+        // loginErrorMsgVisible
+        assertTrue(elementFound);
     }
 }

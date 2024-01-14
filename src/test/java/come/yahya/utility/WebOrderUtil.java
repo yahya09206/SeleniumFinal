@@ -37,5 +37,12 @@ public class WebOrderUtil {
         Driver.getDriver().findElement(By.id("ctl00_MainContent_login_button")).click();
     }
 
+    public static boolean loginErrorMsgVisible(){
+
+        boolean elementFound = BrowserUtil.checkvisbilityOfElement(By.xpath
+                ("//span[.='Invalid Login or Password.']"), 2);
+        return elementFound;
+    }
+
 
 }
