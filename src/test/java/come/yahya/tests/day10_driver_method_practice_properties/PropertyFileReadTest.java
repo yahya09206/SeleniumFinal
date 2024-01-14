@@ -24,8 +24,29 @@ public class PropertyFileReadTest {
         // close the connection by calling slow method of FileInputStream object
         in.close();
 
-        // Now actaully read from the properties file using its key
+        // Now actually read from the properties file using its key
         String helloValue = properties.getProperty("hello");
         System.out.println("helloValue = " + helloValue);
+
+        // read from file without saving into variable
+        System.out.println("properties.getProperty(\"message\") = " + properties.getProperty("message"));
+
+        System.out.println("properties.getProperty(\"browser\") = " + properties.getProperty("browser"));
+    }
+
+    @Test
+    public void testReadWithTryCatch(){
+
+        try {
+            FileInputStream input = new FileInputStream("config.properties");
+            Properties properties = new Properties();
+            properties.load(input);
+            // this will throw IOException, its parent of FileNotFoundException
+            input.close();
+            System.out.println("properties.getProperty(\"hello\") = " + properties.getProperty("hello"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
