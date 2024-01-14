@@ -52,10 +52,10 @@ public class WebOrderPracticeTest extends TestBase {
 //        }
 
         // Check if element exists using new method we just created in BrowserUtil
-        boolean elementFound = BrowserUtil.checkvisbilityOfElement(By.xpath
-                ("//span[.='Invalid Login or Password.']"), 2);
-        // Wrap above cove into method isnide WebOrderUtil
+//        boolean elementFound = BrowserUtil.checkvisbilityOfElement(By.xpath
+//                ("//span[.='Invalid Login or Password.']"), 2);
+        // Wrap above cove into method inside WebOrderUtil
         // loginErrorMsgVisible
-        assertTrue(elementFound);
+        assertTrue(WebOrderUtil.loginErrorMsgVisible());
     }
 }
