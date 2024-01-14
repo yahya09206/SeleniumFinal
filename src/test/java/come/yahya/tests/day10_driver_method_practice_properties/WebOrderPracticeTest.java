@@ -77,7 +77,7 @@ public class WebOrderPracticeTest extends TestBase {
     public void demonstrationBrowserClosIssue(){
         WebOrderUtil.openWebOrderapp();
 
-        Driver.getDriver().quit();
+        // Driver.getDriver().quit();
 
         Driver.getDriver().get("https://google.com");
     }
