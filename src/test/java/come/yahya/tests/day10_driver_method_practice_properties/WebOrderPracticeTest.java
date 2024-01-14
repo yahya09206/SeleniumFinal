@@ -59,4 +59,9 @@ public class WebOrderPracticeTest extends TestBase {
         // loginErrorMsgVisible
         assertTrue(WebOrderUtil.loginErrorMsgVisible());
     }
+
+    @Test
+    public void testClearInputbox(){
+
+    }
 }
