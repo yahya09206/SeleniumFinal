@@ -22,7 +22,7 @@ public class ConfigReader {
     }
 
     /**
-     *
+     * Get the value of key according to the key provided
      * @param key
      * @return
      */

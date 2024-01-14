@@ -49,4 +49,9 @@ public class PropertyFileReadTest {
         }
 
     }
+
+    @Test
+    public void testReadingUsingUtilityClass(){
+
+    }
 }
