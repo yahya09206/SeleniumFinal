@@ -63,5 +63,13 @@ public class WebOrderPracticeTest extends TestBase {
     @Test
     public void testClearInputbox(){
 
+        WebOrderUtil.openWebOrderapp();
+
+        WebElement usernameField = driver.findElement(By.id("ctl00_MainContent_username"));
+        usernameField.sendKeys("adfalkfjalfkjasldf");
+        BrowserUtil.waitFor(3);
+        usernameField.clear();
+        BrowserUtil.waitFor(3);
+
     }
 }
