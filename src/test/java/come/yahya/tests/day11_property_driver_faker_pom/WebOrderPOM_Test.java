@@ -17,6 +17,7 @@ public class WebOrderPOM_Test extends TestBase {
 
         loginPage.goTo();
         loginPage.login(ConfigReader.read("weborder_username"), ConfigReader.read("weborder_password"));
+        // assertTrue(loginPage.loginErrorMsgPresent)
         BrowserUtil.waitFor(4);
     }
 }
