@@ -14,5 +14,10 @@ public class FakerPracticeTest {
         System.out.println("faker.name().firstName() = " + faker.name().firstName());
         System.out.println("faker.name.lastName() = " + faker.name().lastName());
         System.out.println("faker.name().fullName() = " + faker.name().fullName());
+
+        System.out.println("faker.phoneNumber().cellPhone() = " + faker.phoneNumber().cellPhone());
+        System.out.println("faker.chuckNorris().fact() = " + faker.chuckNorris().fact());
+
+        System.out.println("faker.numerify(\"###-###-####\") = " + faker.numerify("###-###-####"));
     }
 }
