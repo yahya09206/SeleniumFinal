@@ -34,4 +34,11 @@ public class WLoginPage {
     public void goTo(){
         Driver.getDriver().navigate().to(ConfigReader.read("weborder_url"));
     }
+
+    public void login(String username, String password){
+
+        userNameField.sendKeys(username);
+        passwordField.sendKeys(password);
+        loginButton.click();
+    }
 }
