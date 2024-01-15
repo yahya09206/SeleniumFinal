@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class WCommonArea {
 
-    @FindBy(linkText = "ctl00_logout")
+    @FindBy(id = "ctl00_logout")
     public WebElement logoutLink;
-    @FindBy(linkText = "View all Orders")
+    @FindBy(linkText = "View all orders")
     public WebElement viewAllOrdersTab;
     @FindBy(linkText = "View all products")
     public WebElement viewAllProductsTab;

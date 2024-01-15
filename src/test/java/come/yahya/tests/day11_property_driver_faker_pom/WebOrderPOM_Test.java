@@ -1,6 +1,7 @@
 package come.yahya.tests.day11_property_driver_faker_pom;
 
 import come.yahya.pages.WAllOrderPage;
+import come.yahya.pages.WCommonArea;
 import come.yahya.pages.WLoginPage;
 import come.yahya.utility.BrowserUtil;
 import come.yahya.utility.ConfigReader;
@@ -47,5 +48,27 @@ public class WebOrderPOM_Test extends TestBase {
         // print out size of all headerCells
         System.out.println("allOrderPage.headerCells.size() = " + allOrderPage.headerCells.size());
         assertEquals(13, allOrderPage.headerCells.size());
+    }
+
+    @Test
+    public void testCommonArea(){
+
+        WLoginPage loginPage = new WLoginPage();
+        loginPage.goTo();
+        loginPage.login("Tester", "test");
+
+        WCommonArea commonArea = new WCommonArea();
+        commonArea.orderTab.click();
+        BrowserUtil.waitFor(2);
+
+        commonArea.viewAllOrdersTab.click();
+        BrowserUtil.waitFor(2);
+
+        commonArea.viewAllProductsTab.click();
+        BrowserUtil.waitFor(2);
+
+        commonArea.logoutLink.click();
+        BrowserUtil.waitFor(2);
+
     }
 }
