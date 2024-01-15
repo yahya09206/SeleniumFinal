@@ -98,7 +98,7 @@ public class WebOrderPOM_Test extends TestBase {
         orderPage.streetBox.sendKeys(faker.address().streetAddress());
         orderPage.cityBox.sendKeys(faker.address().cityName());
         orderPage.stateBox.sendKeys(faker.address().state());
-        orderPage.zipBox.sendKeys(faker.address().zipCode());
+        orderPage.zipBox.sendKeys(faker.numerify("#####"));
 
         // Payment info
         orderPage.visaRadioButton.click();

@@ -13,16 +13,16 @@ public class WOrderPage {
     @FindBy(id = "ctl00_Main_fmwOrder_ddlProduct")
     public WebElement productDropdown;
 
-    @FindBy(id = "ctl00_Main_fmwOrder_txtQuantity")
+    @FindBy(id = "ctl00_MainContent_fmwOrder_txtQuantity")
     public WebElement quantityBox;
 
-    @FindBy(id = "ctl00_Main_fmwOrder_txtUnitPrice")
+    @FindBy(id = "ctl00_MainContent_fmwOrder_txtUnitPrice")
     public WebElement priceBox;
 
-    @FindBy(id = "ctl00_Main_fmwOrder_txtDiscount")
+    @FindBy(id = "ctl00_MainContent_fmwOrder_txtDiscount")
     public WebElement discountBox;
 
-    @FindBy(id = "ctl00_Main_fmwOrder_txtTotal")
+    @FindBy(id = "ctl00_MainContent_fmwOrder_txtTotal")
     public WebElement totalBox;
 
     @FindBy(css = "input[type='submit'][value='Calculate']")
@@ -58,7 +58,7 @@ public class WOrderPage {
     @FindBy(id = "ctl00_MainContent_fmwOrder_InsertButton")
     public WebElement processButton;
 
-    @FindBy(xpath = "//strong[normalize-space(.)='New order has been successfully processed")
+    @FindBy(xpath = "//strong[normalize-space(.)='New order has been successfully added']")
     public WebElement successMessage;
 
     public WOrderPage(){
