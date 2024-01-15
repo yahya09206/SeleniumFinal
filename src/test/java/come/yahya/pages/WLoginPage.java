@@ -14,6 +14,8 @@ public class WLoginPage {
     public WebElement passwordField;
     @FindBy(css = "#ctl00_MainContent_login_button")
     public WebElement loginButton;
+    @FindBy(xpath = "//span[.='Invalid Login or Password.]")
+    public WebElement errorMsg;
 
     // Now we need to instruct Selenium to start looking for element when this instructor is called
     public WLoginPage(){
@@ -40,5 +42,9 @@ public class WLoginPage {
         userNameField.sendKeys(username);
         passwordField.sendKeys(password);
         loginButton.click();
+    }
+
+    public boolean loginErrorMsgPresent(){
+        return this.errorMsg.isDisplayed();
     }
 }
