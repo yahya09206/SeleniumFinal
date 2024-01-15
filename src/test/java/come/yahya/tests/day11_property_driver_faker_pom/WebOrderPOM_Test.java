@@ -71,4 +71,18 @@ public class WebOrderPOM_Test extends TestBase {
         BrowserUtil.waitFor(2);
 
     }
+
+    @Test
+    public void testOrderFlow(){
+
+        WLoginPage loginPage = new WLoginPage();
+        loginPage.goTo();
+        loginPage.login("Tester", "test");
+
+        WCommonArea commonArea = new WCommonArea();
+        commonArea.orderTab.click();
+        BrowserUtil.waitFor(2);
+
+
+    }
 }
