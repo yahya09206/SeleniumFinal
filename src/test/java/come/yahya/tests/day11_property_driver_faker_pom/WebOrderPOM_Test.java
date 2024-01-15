@@ -2,6 +2,7 @@ package come.yahya.tests.day11_property_driver_faker_pom;
 
 import come.yahya.pages.WLoginPage;
 import come.yahya.utility.BrowserUtil;
+import come.yahya.utility.ConfigReader;
 import come.yahya.utility.Driver;
 import come.yahya.utility.TestBase;
 import org.junit.jupiter.api.Test;
@@ -15,7 +16,7 @@ public class WebOrderPOM_Test extends TestBase {
         WLoginPage loginPage = new WLoginPage();
 
         loginPage.goTo();
-        loginPage.login("Tester", "test");
+        loginPage.login(ConfigReader.read("weborder_username"), "weborder_password");
         BrowserUtil.waitFor(4);
     }
 }
