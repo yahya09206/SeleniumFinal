@@ -43,5 +43,9 @@ public class WebOrderPOM_Test extends TestBase {
         BrowserUtil.waitFor(2);
 
         allOrderPage.uncheckAllButton.click();
+
+        // print out size of all headerCells
+        System.out.println("allOrderPage.headerCells.size() = " + allOrderPage.headerCells.size());
+        assertEquals(13, allOrderPage.headerCells.size());
     }
 }
