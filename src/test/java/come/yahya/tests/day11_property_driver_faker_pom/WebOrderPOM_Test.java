@@ -6,7 +6,10 @@ import come.yahya.utility.BrowserUtil;
 import come.yahya.utility.ConfigReader;
 import come.yahya.utility.Driver;
 import come.yahya.utility.TestBase;
+import org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class WebOrderPOM_Test extends TestBase {
 
@@ -31,6 +34,14 @@ public class WebOrderPOM_Test extends TestBase {
 
         // After logging in go to all order page
         WAllOrderPage allOrderPage = new WAllOrderPage();
+
+        // Assert that header element is displayed
+        assertTrue(allOrderPage.header.isDisplayed());
+
         allOrderPage.checkAllButton.click();
+
+        BrowserUtil.waitFor(2);
+
+        allOrderPage.uncheckAllButton.click();
     }
 }
