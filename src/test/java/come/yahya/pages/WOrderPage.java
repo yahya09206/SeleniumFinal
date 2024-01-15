@@ -58,8 +58,10 @@ public class WOrderPage {
     @FindBy(id = "ctl00_MainContent_fmwOrder_InsertButton")
     public WebElement processButton;
 
+    @FindBy(xpath = "//strong[normalize-space(.)='New order has been successfully processed")
+    public WebElement successMessage;
+
     public WOrderPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
 }
