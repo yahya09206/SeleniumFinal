@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class WAllOrderPage {
 
-    @FindBy(xpath = "//h2['normalize-space(.) = 'List of All Orders']")
+    @FindBy(xpath = "//h2[normalize-space(.) = 'List of All Orders']")
     public WebElement header;
     @FindBy(id = "ctl00_MainContent_btnCheckAll")
     public WebElement checkAllButton;
