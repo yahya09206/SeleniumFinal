@@ -1,14 +1,18 @@
 package come.yahya.tests.day11_property_driver_faker_pom;
 
+import com.github.javafaker.Faker;
 import come.yahya.pages.WAllOrderPage;
 import come.yahya.pages.WCommonArea;
 import come.yahya.pages.WLoginPage;
+import come.yahya.pages.WOrderPage;
 import come.yahya.utility.BrowserUtil;
 import come.yahya.utility.ConfigReader;
 import come.yahya.utility.Driver;
 import come.yahya.utility.TestBase;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Keys;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -83,6 +87,29 @@ public class WebOrderPOM_Test extends TestBase {
         commonArea.orderTab.click();
         BrowserUtil.waitFor(2);
 
+        // Place order with information
+        WOrderPage orderPage = new WOrderPage();
+        orderPage.quantityBox.sendKeys(Keys.BACK_SPACE + "10");
+        orderPage.calculateButton.click();
+
+        // Customer info
+        Faker faker = new Faker();
+        orderPage.customerNameBox.sendKeys(faker.name().fullName());
+        orderPage.streetBox.sendKeys(faker.address().streetAddress());
+        orderPage.cityBox.sendKeys(faker.address().cityName());
+        orderPage.stateBox.sendKeys(faker.address().state());
+        orderPage.zipBox.sendKeys(faker.address().zipCode());
+
+        // Payment info
+        orderPage.visaRadioButton.click();
+        orderPage.cardNumber.sendKeys(faker.numerify("################"));
+        orderPage.cardDate.sendKeys(faker.numerify("0#/0#"));
+
+        orderPage.processButton.click();
+
+        Assertions.assertTrue(orderPage.successMessage.isDisplayed());
+
+        BrowserUtil.waitFor(5);
 
     }
 }
