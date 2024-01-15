@@ -1,7 +1,9 @@
 package come.yahya.pages;
 
+import come.yahya.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class WOrderPage {
 
@@ -45,7 +47,7 @@ public class WOrderPage {
 
     // Payment Information
     @FindBy(id = "ctl00_MainContent_fmwOrder_cardList_0")
-    public WebElement cardRadio;
+    public WebElement visaRadioButton;
 
     @FindBy(id = "ctl00_MainContent_fmwOrder_TextBox6")
     public WebElement cardNumber;
@@ -55,5 +57,9 @@ public class WOrderPage {
 
     @FindBy(id = "ctl00_MainContent_fmwOrder_InsertButton")
     public WebElement processButton;
+
+    public WOrderPage(){
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
 }
