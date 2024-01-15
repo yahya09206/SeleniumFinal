@@ -1,5 +1,6 @@
 package come.yahya.pages;
 
+import come.yahya.utility.ConfigReader;
 import come.yahya.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,6 +24,14 @@ public class WLoginPage {
             // initElements accept 2 arguments
             // WebDriver instance and Page class instance (this) means current instance of this class
         PageFactory.initElements(Driver.getDriver(), this);
+    }
 
+    /**
+     * Create a method to goTo
+     * accept no param just navigate to login page
+     * use config.properties for url
+     */
+    public void goTo(){
+        Driver.getDriver().navigate().to(ConfigReader.read("weborder_url"));
     }
 }
