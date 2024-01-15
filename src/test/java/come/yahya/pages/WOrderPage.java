@@ -58,7 +58,7 @@ public class WOrderPage {
     @FindBy(id = "ctl00_MainContent_fmwOrder_InsertButton")
     public WebElement processButton;
 
-    @FindBy(xpath = "//strong[normalize-space(.)='New order has been successfully added']")
+    @FindBy(xpath = "//strong[normalize-space(.)='New order has been successfully added.']")
     public WebElement successMessage;
 
     public WOrderPage(){
